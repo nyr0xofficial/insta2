@@ -1,12 +1,8 @@
 {
   "name": "instagram-login-page",
   "version": "1.0.0",
-  "description": "Page de connexion Instagram avec backend.",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  "description": "Page de connexion Instagram avec backend serverless.",
   "dependencies": {
-    "express": "^4.18.2"
+    "@upstash/redis": "^1.28.4"
   }
 }
