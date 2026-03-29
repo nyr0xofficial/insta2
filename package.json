@@ -1,8 +1,0 @@
-{
-  "name": "instagram-login-page",
-  "version": "1.0.0",
-  "description": "Page de connexion Instagram avec backend serverless.",
-  "dependencies": {
-    "@upstash/redis": "^1.28.4"
-  }
-}
