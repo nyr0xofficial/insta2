@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { redis } from "@/lib/redis";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const raw = await redis.lrange("formulaire:submissions", 0, -1);
