@@ -3,174 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>Connexion - Acme Corp</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fafafa;
+            background-color: #f0f2f5;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 350px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .panel {
+        .login-container {
             background-color: white;
-            border: 1px solid #dbdbdb;
-            border-radius: 1px;
-            padding: 10px 40px 40px 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
+            max-width: 400px;
+            text-align: center;
         }
         .logo {
-            margin: 32px 0 12px 0;
-            width: 175px;
-            height: auto;
-        }
-        .logo img {
-            width: 100%;
-            display: block;
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 30px;
         }
         .form {
             display: flex;
             flex-direction: column;
-            width: 100%;
-            margin-top: 24px;
         }
         .form input {
-            height: 38px;
-            border: 1px solid #dbdbdb;
-            border-radius: 3px;
-            padding: 0 10px;
-            margin-bottom: 6px;
-            background-color: #fafafa;
-            font-size: 12px;
+            height: 44px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
             box-sizing: border-box;
         }
         .form input:focus {
             outline: none;
-            border: 1px solid #a0a0a0;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
         }
         .form button {
-            margin-top: 8px;
-            background-color: #0095f6;
+            height: 44px;
+            background-color: #1a73e8;
             color: white;
             border: none;
-            border-radius: 8px;
-            padding: 8px;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .divider {
-            display: flex;
-            align-items: center;
-            margin: 15px 0;
-            color: #8e8e8e;
-            font-weight: 500;
-            width: 100%;
-        }
-        .divider::before, .divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background-color: #dbdbdb;
-        }
-        .divider span {
-            padding: 0 20px;
-        }
-        .facebook-login {
-            color: #385185;
+            border-radius: 5px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 20px;
             cursor: pointer;
-            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .form button:hover {
+            background-color: #155ab6;
         }
         .forgot-password {
-            color: #385185;
-            font-size: 12px;
-            margin-top: 12px;
+            margin-top: 20px;
         }
         .forgot-password a {
+            color: #1a73e8;
             text-decoration: none;
-            color: #385185;
-        }
-        .signup-panel {
-            background-color: white;
-            border: 1px solid #dbdbdb;
-            border-radius: 1px;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
             font-size: 14px;
         }
-        .signup-panel a {
-            color: #0095f6;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .apps {
-            margin-top: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .apps p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .app-images {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-        }
-        .app-images img {
-            width: 136px;
-            height: 40px;
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <div class="panel">
-            <div class="logo">
-                <img src="insta.png" alt="Instagram">
-            </div>
-            <!-- LA SEULE MODIFICATION IMPORTANTE EST ICI -->
-            <form class="form" action="/api/submit" method="POST">
-                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-                <input type="password" name="password" placeholder="Mot de passe" required>
-                <button type="submit">Se connecter</button>
-            </form>
-            <div class="divider">
-                <span>OU</span>
-            </div>
-            <div class="facebook-login">
-                <span>Se connecter avec Facebook</span>
-            </div>
-            <div class="forgot-password">
-                <a href="#">Mot de passe oublié ?</a>
-            </div>
+    <div class="login-container">
+        <div class="logo">Acme Corp</div>
+        <form class="form" action="/api/submit" method="POST">
+            <input type="email" name="username" placeholder="Adresse e-mail" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Mot de passe oublié ?</a>
         </div>
-        <div class="signup-panel">
-            <span>Vous n'avez pas de compte ? <a href="#">Inscrivez-vous</a></span>
-        </div>
-        <div class="apps">
-            <p>Téléchargez l'application.</p>
-            <div class="app-images">
-                <img src="app-store.png" alt="App Store">
-                <img src="google-play.png" alt
+    </div>
+</body>
+</html>
